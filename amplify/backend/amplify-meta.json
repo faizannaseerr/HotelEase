@@ -1,0 +1,85 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-airbnb-dev-161436-authRole",
+      "UnauthRoleArn": "arn:aws:iam::049747951426:role/amplify-airbnb-dev-161436-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::049747951426:role/amplify-airbnb-dev-161436-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-airbnb-dev-161436-deployment",
+      "UnauthRoleName": "amplify-airbnb-dev-161436-unauthRole",
+      "StackName": "amplify-airbnb-dev-161436",
+      "StackId": "arn:aws:cloudformation:us-east-1:049747951426:stack/amplify-airbnb-dev-161436/28b6a860-312e-11ee-a017-0a244cf8336d",
+      "AmplifyAppId": "d2aoksyk17alz1"
+    }
+  },
+  "auth": {
+    "airbnb3b24dbed": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-airbnb-dev-161436-deployment/amplify-cfn-templates/auth/airbnb3b24dbed-cloudformation-template.json",
+        "logicalId": "authairbnb3b24dbed"
+      },
+      "lastPushTimeStamp": "2023-08-02T21:20:07.919Z",
+      "output": {
+        "UserPoolId": "us-east-1_02WmSAcck",
+        "AppClientIDWeb": "42r90rhsi0095c4qhp4vbl761o",
+        "AppClientID": "5ob2o3p7ikc0s7pud5r21hqiu6",
+        "IdentityPoolId": "us-east-1:a67ae8f2-c501-4f5d-8c6b-e69871eddeb2",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:049747951426:userpool/us-east-1_02WmSAcck",
+        "IdentityPoolName": "airbnb3b24dbed_identitypool_3b24dbed__dev",
+        "UserPoolName": "airbnb3b24dbed_userpool_3b24dbed"
+      },
+      "lastPushDirHash": "HbtRV0slQ3RJZhi3pSIyU0KNf1Q="
+    }
+  },
+  "api": {
+    "airbnb": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 365,
+              "apiKeyExpirationDate": "2024-08-01T21:04:48.952Z",
+              "description": ""
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "e3yye6wrrnaaxcuxm6vtb27sqy",
+        "GraphQLAPIEndpointOutput": "https://lxgfeevkcfho3lpmlpcvltekki.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-ztvcrsuka5afzi6yjfi6lhahkm"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-airbnb-dev-161436-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiairbnb"
+      },
+      "lastPushTimeStamp": "2023-08-02T21:20:11.051Z",
+      "lastPushDirHash": "gmuA7WzYKyeGuSQpv5SKV6DsFBo="
+    }
+  }
+}
